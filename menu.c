@@ -15,7 +15,7 @@ int main()
  //cat ~/.zshrc   
 //printf("1033[H\033[Jva prima dell contenuto
 
-    while(scegli !='A'&&!='B')
+    while(scegli !='A'&& !='B')
         {
         stampamenu();
         printf("\nA te la scelta: ");
