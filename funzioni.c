@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#ifndef MAGO_H
-#define MAGO_H
+//#ifndef MAGO_H
+//#define MAGO_H
 
-#include <unistd.h> // Per usare sleep
+//#include <unistd.h> // Per usare sleep
 void displayMagoCattivo() {
     printf("          ____   \n");
     printf("         /    \\  \n");
@@ -24,7 +24,8 @@ void displayMagoCattivo() {
     printf("     ~~~~~~~~~~~~~~\n");
 }
 
-void introduzioneGioco() {
+void introduzioneGioco()
+{
     printf("\n\n");
     displayMagoCattivo();
     printf("\n\n");
@@ -34,66 +35,67 @@ void introduzioneGioco() {
     printf("Se fallisci, la mia maledizione cadrà su di te per l'eternità.\n");
     printf("Preparati... il gioco sta per cominciare!\n");
     printf("Rispondi alle domande e dimostra il tuo valore, se ne hai il coraggio...\n");
+    printf("Quindi sciocco mortale, accetti di mettere in gioco la tua anima(A) oppure vuoi ritornare a casa a vivere la tua misarabile vita da sciocco(B)\n");
 }
-#endif // MAGO_H
+//#endif // MAGO_H
 
 // Dichiarazione delle funzioni
-void displayFiamme();
-void gameOverAnimation();
+//void displayFiamme();
+//void gameOverAnimation();
 
 
 
 
 // Funzione per mostrare le fiamme
-void displayFiamme() {
-    const char *frames[] = {
-        "         (  .      )\n"
-        "     )           (              )\n"
-        "           .  '   .   '  .  '  .\n"
-        "  (    , )       (.   )  (   ',    )\n"
-        "   .' ) ( . )    ,  ( ,     )   ( .\n"
-        "  ). , ( .   (  ) ( , ')  .' (  ,    )\n"
-        " (_,) . ), ) _) _,')  (, ) '. )  ,. (' )\n",
+//void displayFiamme() {
+  //  const char *frames[] = {
+     //   "         (  .      )\n"
+      //  "     )           (              )\n"
+      //  "           .  '   .   '  .  '  .\n"
+     //   "  (    , )       (.   )  (   ',    )\n"
+      //  "   .' ) ( . )    ,  ( ,     )   ( .\n"
+      //  "  ). , ( .   (  ) ( , ')  .' (  ,    )\n"
+       // " (_,) . ), ) _) _,')  (, ) '. )  ,. (' )\n",
+//
+      //  "          (.   )  )\n"
+       // "     )           (              )\n"
+      //  "           .  '   .   '  .  '  .\n"
+      //  "  (    , )       (.   )  (   ',    )\n"
+      //  "   .' ) ( . )    ,  ( ,     )   ( .\n"
+      //  "  ). , ( .   (  ) ( , ')  .' (  ,    )\n"
+      //  " (_,) . ), ) _) _,')  (, ) '. )  ,. (' )\n",
+//
+       // "           (.  .  )\n"
+       // "     )           (              )\n"
+      //  "           .  '   .   '  .  '  .\n"
+      //  "  (    , )       (.   )  (   ',    )\n"
+       // "   .' ) ( . )    ,  ( ,     )   ( .\n"
+       // "  ). , ( .   (  ) ( , ')  .' (  ,    )\n"
+       /// " (_,) . ), ) _) _,')  (, ) '. )  ,. (' )\n"
+ //   };
+    //int num_frames = sizeof(frames) / sizeof(frames[0]);
 
-        "          (.   )  )\n"
-        "     )           (              )\n"
-        "           .  '   .   '  .  '  .\n"
-        "  (    , )       (.   )  (   ',    )\n"
-        "   .' ) ( . )    ,  ( ,     )   ( .\n"
-        "  ). , ( .   (  ) ( , ')  .' (  ,    )\n"
-        " (_,) . ), ) _) _,')  (, ) '. )  ,. (' )\n",
+    //for (int i = 0; i < 10; ++i) { // Loop per mostrare l'animazione 10 volte
+      //  for (int j = 0; j < num_frames; ++j) {
+       //     printf("\033[H\033[J"); // Codice ANSI per pulire lo schermo
+         //   printf("%s\n", frames[j]);
+           // fflush(stdout); // Assicurati che l'output sia immediatamente visibile
+         //   usleep(200000); // Pausa per 200 millisecondi
+        //}
+  //  }
+///}
 
-        "           (.  .  )\n"
-        "     )           (              )\n"
-        "           .  '   .   '  .  '  .\n"
-        "  (    , )       (.   )  (   ',    )\n"
-        "   .' ) ( . )    ,  ( ,     )   ( .\n"
-        "  ). , ( .   (  ) ( , ')  .' (  ,    )\n"
-        " (_,) . ), ) _) _,')  (, ) '. )  ,. (' )\n"
-    };
-    int num_frames = sizeof(frames) / sizeof(frames[0]);
-
-    for (int i = 0; i < 10; ++i) { // Loop per mostrare l'animazione 10 volte
-        for (int j = 0; j < num_frames; ++j) {
-            printf("\033[H\033[J"); // Codice ANSI per pulire lo schermo
-            printf("%s\n", frames[j]);
-            fflush(stdout); // Assicurati che l'output sia immediatamente visibile
-            usleep(200000); // Pausa per 200 millisecondi
-        }
-    }
-}
-
-void gameOverAnimation() {
-    displayFiamme();
-}
-int main() {
-    displayMagoCattivo();
+//void gameOverAnimation() {
+//    displayFiamme();
+///}
+int main() 
+{
     introduzioneGioco();
    
     // Simula una perdita del gioco
-    printf("Hai perso il gioco! Preparati a essere consumato dalle fiamme!\n");
-    sleep(2); // Pausa per drammatizzare
-    gameOverAnimation();
+   // printf("Hai perso il gioco! Preparati a essere consumato dalle fiamme!\n");
+   // sleep(2); // Pausa per drammatizzare
+  //  gameOverAnimation();
     return 0;
     // Inizia il gioco delle domande qui
 }
